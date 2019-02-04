@@ -1,0 +1,20 @@
+
+body {
+	background-color: #E5FCF5;
+}
+
+h1, p {
+	color: #210124;
+	font-size:20px;
+	text-align:center;
+}
+ul{
+	padding:10x;
+}
+li{
+	display:incline;
+	padding:0px,10px, 0px, 10px;
+}
+#slogan{
+	font-style: italic;
+	}
