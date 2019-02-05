@@ -1,20 +1,57 @@
 
+header{
+	text-align:center;
+
+}
 body {
 	background-color: #E5FCF5;
-}
+	background: url(https://mindfullifetoday.com/wp-content/uploads/mindfulness-programs-for-parents.jpg);
+	background-size: cover;
 
-h1, p {
+}
+input[placeholder="your email"]{
+	border:0;
+	padding:10px;
+	font-size:11px;
+	color:grey;
+}
+article{
+	width:250px;
+	padding:7px;
+	margin:1 auto;
+	text-align:left;
+	color:black;
+	background:white;
+}
+h1 {
+	color: #210124;
+	font-size:40px;
+	text-align:center;
+	font-style: bold;
+	font-family: Arrus BT;
+}
+p{
+	color: #210124;
+	font-size:18px;
+	text-align:left;
+	font-family:century gothic;
+	}
+#slogan{
+	font-weight:bold;
+}	
+h2{
 	color: #210124;
 	font-size:20px;
 	text-align:center;
+	font-style:italic;
+}
+img{
+	text-align:center;
 }
 ul{
-	padding:10x;
+	padding:0px,15px,0px,15px;
 }
 li{
-	display:incline;
-	padding:0px,10px, 0px, 10px;
+	display:inline;
+	padding:0px,30px, 0px, 30px;
 }
-#slogan{
-	font-style: italic;
-	}
