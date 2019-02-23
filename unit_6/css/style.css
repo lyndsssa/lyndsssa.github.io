@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow|Barlow|Heebo);
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+	background-color: #E5FCF5;
+	color: #210124;
+	background-size: cover;
+	line-height: 1.3;
+}
+header{
+	text-align:center;
+}
+h1{
+	font-size:40px;
+	text-align:center;
+	font-style: bold;
+	font-family: Arrus BT;
+}
+h2{
+	font-size:20px;
+	text-align:center;
+	font-style:normal;
+}
+h2,h3, nav, form{
+	font-family: 'Archivo Narrow', sans-serif;
+}
+article>*{
+	width:1200px;
+}
+p{
+	font-size:18px;
+	text-align:left;
+	font-family: 'Barlow', sans-serif;
+	margin-top:1em;
+	}
+input[placeholder="your email"]{
+	border:0;
+	padding:10px;
+	font-size:11px;
+}
+img{
+	width:50%;
+}
+.crafts, .littleleague, .camping, .hollywood, .goldengate, .bird, .museum,{
+	width:1200px;
+	margin:1 auto;
+	text-align:center;
+	color:black;
+	background:white;
+	box-sizing: border-box;
+}
+.first{
+	font-family: 'Heebo', sans-serif;
+}
+.slogan{
+	font-weight:bold;
+}	
+
+
+
