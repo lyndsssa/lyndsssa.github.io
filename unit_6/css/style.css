@@ -6,6 +6,7 @@ body {
 	background-size: cover;
 	line-height: 1.3;
 }
+
 header{
 	text-align:center;
 }
@@ -38,7 +39,7 @@ input[placeholder="your email"]{
 	font-size:11px;
 }
 img{
-	width:50%;
+	width:33.3%;
 }
 .crafts, .littleleague, .camping, .hollywood, .goldengate, .bird, .museum,{
 	width:1200px;
