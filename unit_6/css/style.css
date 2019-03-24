@@ -24,7 +24,7 @@ h2{
 h2,h3, nav, form{
 	font-family: 'Archivo Narrow', sans-serif;
 }
-article>*{
+article{
 	width:1200px;
 }
 p{
@@ -39,9 +39,9 @@ input[placeholder="your email"]{
 	font-size:11px;
 }
 img{
-	width:33.3%;
+	width:50%;
 }
-.crafts, .littleleague, .camping, .hollywood, .goldengate, .bird, .museum,{
+.sponsored, .outdoors, .featuredevents{
 	width:1200px;
 	margin:1 auto;
 	text-align:center;
@@ -55,32 +55,61 @@ img{
 .slogan{
 	font-weight:bold;
 }
+#single_column{
+	background-color: #FFB7CF;
+	border: 1px black solid;
+	padding: 20px;
+}
 #two_column{
 	background-color: #FFB7CF;
 	border: 1px black solid;
 	padding: 20px;
 }
-#left{
+#three_column{
+	background-color: #FFB7CF;
+	border:1px black solid;
+	padding: 2%;
+	width:46%px;
+	clear:both;
+}
+.outdoors{
 	background-color: violet;
 	border: 1px black solid;
 	padding: 20px;
 	float: left;
-	width: 50%;
+	width: 33.3%;
+	margin:10px;
+
 }
-#right{
+.sponsored{
+	background-color: violet;
+	border: 1px black solid;
+	padding: 20px;
+	float: left;
+	width: 100%;
+	margin:10px;
+
+}
+#painting{
+	background-color: violet;
+	border: 1px black solid;
+	padding: 20px;
+	float: left;
+	width: 30%;
+}
+#baseball{
 	background-color: pink;
 	border: 1px black solid;
 	padding: 20px;
 	float: right;
-	width: 50%;
+	width: 62%;
 }
 .clearfix:after{
 	visibility: hidden;
 	display: block;
-	font-size: 0:
 	content: " ";
 	clear: both;
-	height:0;
+
 
 }	
 
