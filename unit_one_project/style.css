@@ -1,0 +1,69 @@
+html{
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  background: pink;
+  background-image: url("https://i.pinimg.com/564x/fa/7a/18/fa7a18eeae5533f2044998e7f58048e7.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+
+
+
+}
+
+@media (min-width: 900px)
+body {
+  padding: 36px;
+  background: pink;
+  cursor: pointer;
+}
+
+@media (min-width: 768px)
+body {
+  padding: 30px;
+  background: pink;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: normal;
+  margin: 0 auto .5em auto;
+  color: #3b3b3b;
+  padding-top: 65px;
+  padding-bottom: 30px;
+}
+
+article{
+  color: #3b3b3b;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 25px;
+  padding: 10px 30px;
+  margin-left: 19%;
+  margin-right: 19%;
+  background: white;
+  letter-spacing: 0.19em;
+  opacity: 0.5;
+
+}
+
+.searchBar{
+  text-align: center;
+  font-family: sans-serif;
+  padding-top: 4%;
+}
+
+  .searchBar:hover{
+  color: pink;
+  cursor: pointer;
+}
+
+#wrapper{
+  
+}
