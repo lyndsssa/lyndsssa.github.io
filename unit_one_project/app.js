@@ -22,7 +22,7 @@ $ul.empty();
             //jsonpCallback: "logResults",
             success: function(data) {
               console.log(data);
-              console.log(data.meals[0].strMeal);
+              //console.log(data.meals[0].strMeal);
 
   //  $ul.empty();
   //make loop to cycle through 5 items from data
@@ -46,6 +46,7 @@ $ul.empty();
         })
       })
 
+
       function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -53,7 +54,9 @@ $ul.empty();
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
+    console.log(event.currentTarget);
     var dropdowns = document.getElementsByClassName("dropdown-content");
+    console.log(dropdowns);
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
