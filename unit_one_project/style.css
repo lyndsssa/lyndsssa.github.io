@@ -7,6 +7,9 @@ html{
   background-size: cover;
   -webkit-background-size: cover;
   image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: auto;
+ image-rendering: crisp-edges;
 
 
 
@@ -17,6 +20,7 @@ body {
   padding: 36px;
   background: pink;
   cursor: pointer;
+
 }
 
 @media (min-width: 768px)
@@ -24,6 +28,7 @@ body {
   padding: 30px;
   background: pink;
   cursor: pointer;
+  
 }
 
 h1 {
@@ -74,25 +79,35 @@ article{
   width: 55px;
   height: 15em;
   font-size: 35px;
+  padding: 50px 0;
 }
 
+.tooltip {
+  position: relative;
+  display: center;
 
+}
 
 .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 100px;
   background-color: pink;
-  color: #3b3b3b;
+  color: black;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
+  opacity: 0.5;
+  font-stretch: condensed;
+  font-size: 13px;
+  margin-right: -55px;
 }
 
   #tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 
 .dropbtn {
   background-color: #3b3b3b;
