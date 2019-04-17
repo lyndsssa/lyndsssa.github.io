@@ -76,9 +76,6 @@ article{
   font-size: 35px;
 }
 
-#wrapper{
-
-}
 
 
 .tooltiptext {
@@ -131,5 +128,37 @@ article{
   display: block;
 }
 
+.dropdown-content a:hover{
+  color: pink;
+  text-decoration: underline;
+}
 /* now need to show the dropdown menu */
 .show {display:block;}
+
+
+.recpies a{
+
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.3em;
+  color: black;
+  opacity: 0.7;
+  margin: 0 auto
+
+  display: flex;
+
+}
+
+li{
+  text-align: center;
+  display: block;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding-top: 8px;
+}
+
+.recpies a:hover{
+  text-decoration: underline;
+  color: pink;
+
+}

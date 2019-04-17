@@ -10,9 +10,9 @@ $(() => {
     // console.log(userInput)
 
     const array = [];
-    const $ul = $('<ul>');
+    const $ul = $('.recpies');
     //create array to file through all of the data when user types key word
-
+$ul.empty();
     let requestUrl = url + '?a=' + userInput;
       console.log(requestUrl);
 
@@ -24,14 +24,18 @@ $(() => {
               console.log(data);
               console.log(data.meals[0].strMeal);
 
-
+  //  $ul.empty();
+  //make loop to cycle through 5 items from data
               for (let i = 0; i < 5; i++) {
-                console.log(data.meals[i]);
+
+                const recipePic= data.meals[i].strMealThumb;
+
+                console.log(data.meals[i]);  //log 5 meals
                 const $li = $('<li>');
                 console.log($li);
-                $li.text(data.meals[i].strMeal).attr('id', i);
-                //array.push(data[i].resolution_description);
-                //console.log(array);
+                //$li.text(data.meals[i].strMeal).attr('id', i);
+                $li.append($('<a>').attr('href', recipePic).text(data.meals[i].strMeal));
+                //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
                 $ul.append($li);
                 console.log($ul);
 
