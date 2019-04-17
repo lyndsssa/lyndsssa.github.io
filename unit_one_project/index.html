@@ -10,14 +10,26 @@
     <script src="app.js"></script>
 </head>
 <body>
-  <div id="wrapper">
+  <div id="container">
   <h1> Food You Love </h1>
-  <article> Find the perfect recipe for any occasion, dont know what to make? That's okay, just type in an ingredent into the search bar below and GO! <br> Choose from hundreds of options! </br></article>
+  <article> Find the perfect recipe for any occasion, dont know what to make? That's okay, just type in an area or style of cuisine into the search bar below and GO! <br> Choose from hundreds of options! </br></article>
+
 
   <form class= "searchBar">
-    <input type="text" placeholder="Type in keyword"/>
-      <input type="submit" value="GO"/>
+    <input id="tooltip" class="search" type="text" placeholder="Type in keyword"/>
+      <input id="button" type="submit" value="GO"/>
+      <span class="tooltiptext">Type here to search for your specific food genera </span>
   </form>
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Mexican</a>
+      <a href="#">American</a>
+      <a href="#">Italian</a>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>
