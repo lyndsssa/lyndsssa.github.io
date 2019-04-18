@@ -48,7 +48,7 @@ $(() => {
         //console.log(data.meals[0].strMeal);
 
         //  $ul.empty();
-        //make loop to cycle through 5 items from data
+        //make loop to cycle through 20 items from data
         for (let i = 0; i < 20; i++) {
 
           const recipePic= data.meals[i].strMealThumb;
@@ -72,13 +72,13 @@ $(() => {
       }
     })
   }
-
+  //add main api for url
   const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
   console.log(url);
-  //api call & ingredient search
+  //api call on searchBar with user input when user hits submit
   $('.searchBar').on('submit', (event) => {
     event.preventDefault();
-  //listner, makes the submit listen to search bar
+  //event listner: makes the submit listen to search bar
     const userInput = $('input[type="text"]').val();
     // console.log(userInput)
 
@@ -93,23 +93,367 @@ $(() => {
               //console.log(data.meals[0].strMeal);
 
   })
-
+//create on click function for eact item in the dropdown menu
 // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      console.log(event.currentTarget);
-      let dropdowns = document.getElementsByClassName("dropdown-content");
-      console.log(dropdowns);
-      //mainFun("yay");
-      let i;
-      for (i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.dropbtn')) {
+  //     console.log(event.currentTarget);
+  //     let dropdowns = document.getElementsByClassName("dropdown-content");
+  //     console.log(dropdowns);
+  //     //mainFun("yay");
+  //     let i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       let openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // }
+//////create click event for each option in dropdown so when clicked the main function for search bar will be called/////
+
+
+  $('.mexFood').on('click',(event) => {
+    console.log(event.currentTarget)
+    let name= event.currentTarget.text
+    console.log(name)
+    //event.currentTarget
+    const $ul= $('.recpies')
+    const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+    console.log(url);
+
+    let requestUrl = url + '?a=' + name
+    console.log(requestUrl)
+
+    $.ajax({
+      url: requestUrl,
+      success: function(data) {
+        console.log(data);
+
+      for (let i = 0; i < 20; i++) {
+
+        const recipePic= data.meals[i].strMealThumb;
+        const recipeId= data.meals[i].idMeal;
+
+        console.log(data.meals[i]);  //log 5 meals
+        const $li = $('<li>');
+        console.log($li);
+        //$li.text(data.meals[i].strMeal).attr('id', i);
+        $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+        //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+        $li.on('click', () => {searchRecipe(recipeId)})
+        //put inside empty function so it will slow down, alloe recipe to be viewed
+
+        $ul.append($li);
+        console.log($ul);
+
       }
+
+      $('#container').append($ul);
+      }
+      })
+    })
+////////item #2 chineeseFood////////////
+    $('.chineeseFood').on('click',(event) => {
+      console.log(event.currentTarget)
+      let name= event.currentTarget.text
+      console.log(name)
+      //event.currentTarget
+      const $ul= $('.recpies')
+      const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+      console.log(url);
+
+      let requestUrl = url + '?a=' + name
+      console.log(requestUrl)
+
+      $.ajax({
+        url: requestUrl,
+        success: function(data) {
+          console.log(data);
+
+        for (let i = 0; i < 20; i++) {
+
+          const recipePic= data.meals[i].strMealThumb;
+          const recipeId= data.meals[i].idMeal;
+
+          console.log(data.meals[i]);  //log 5 meals
+          const $li = $('<li>');
+          console.log($li);
+          //$li.text(data.meals[i].strMeal).attr('id', i);
+          $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+          //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+          $li.on('click', () => {searchRecipe(recipeId)})
+          //put inside empty function so it will slow down, alloe recipe to be viewed
+
+          $ul.append($li);
+          console.log($ul);
+
+        }
+
+        $('#container').append($ul);
+        }
+        })
+      })
+
+
+/////////////item #3 italianFood////////////////
+$('.italianFood').on('click',(event) => {
+  console.log(event.currentTarget)
+  let name= event.currentTarget.text
+  console.log(name)
+  //event.currentTarget
+  const $ul= $('.recpies')
+  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+  console.log(url);
+
+  let requestUrl = url + '?a=' + name
+  console.log(requestUrl)
+
+  $.ajax({
+    url: requestUrl,
+    success: function(data) {
+      console.log(data);
+
+    for (let i = 0; i < 20; i++) {
+
+      const recipePic= data.meals[i].strMealThumb;
+      const recipeId= data.meals[i].idMeal;
+
+      console.log(data.meals[i]);  //log 5 meals
+      const $li = $('<li>');
+      console.log($li);
+      //$li.text(data.meals[i].strMeal).attr('id', i);
+      $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+      //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+      $li.on('click', () => {searchRecipe(recipeId)})
+      //put inside empty function so it will slow down, alloe recipe to be viewed
+
+      $ul.append($li);
+      console.log($ul);
+
     }
-  }
+
+    $('#container').append($ul);
+    }
+    })
+  })
+
+////////////////item #4 french /////////////////
+$('.frenchFood').on('click',(event) => {
+  console.log(event.currentTarget)
+  let name= event.currentTarget.text
+  console.log(name)
+  //event.currentTarget
+  const $ul= $('.recpies')
+  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+  console.log(url);
+
+  let requestUrl = url + '?a=' + name
+  console.log(requestUrl)
+
+  $.ajax({
+    url: requestUrl,
+    success: function(data) {
+      console.log(data);
+
+    for (let i = 0; i < 20; i++) {
+
+      const recipePic= data.meals[i].strMealThumb;
+      const recipeId= data.meals[i].idMeal;
+
+      console.log(data.meals[i]);  //log 5 meals
+      const $li = $('<li>');
+      console.log($li);
+      //$li.text(data.meals[i].strMeal).attr('id', i);
+      $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+      //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+      $li.on('click', () => {searchRecipe(recipeId)})
+      //put inside empty function so it will slow down, alloe recipe to be viewed
+
+      $ul.append($li);
+      console.log($ul);
+
+    }
+
+    $('#container').append($ul);
+    }
+    })
+  })
+
+///////////////item #5 indianFood//////////////////
+  $('.indianFood').on('click',(event) => {
+    console.log(event.currentTarget)
+    let name= event.currentTarget.text
+    console.log(name)
+    //event.currentTarget
+    const $ul= $('.recpies')
+    const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+    console.log(url);
+
+    let requestUrl = url + '?a=' + name
+    console.log(requestUrl)
+
+    $.ajax({
+      url: requestUrl,
+      success: function(data) {
+        console.log(data);
+
+      for (let i = 0; i < 20; i++) {
+
+        const recipePic= data.meals[i].strMealThumb;
+        const recipeId= data.meals[i].idMeal;
+
+        console.log(data.meals[i]);  //log 5 meals
+        const $li = $('<li>');
+        console.log($li);
+        //$li.text(data.meals[i].strMeal).attr('id', i);
+        $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+        //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+        $li.on('click', () => {searchRecipe(recipeId)})
+        //put inside empty function so it will slow down, alloe recipe to be viewed
+
+        $ul.append($li);
+        console.log($ul);
+
+      }
+
+      $('#container').append($ul);
+      }
+      })
+    })
+
+///////////////item #6 japaneseFood/////////////
+    $('.japaneseFood').on('click',(event) => {
+      console.log(event.currentTarget)
+      let name= event.currentTarget.text
+      console.log(name)
+      //event.currentTarget
+      const $ul= $('.recpies')
+      const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+      console.log(url);
+
+      let requestUrl = url + '?a=' + name
+      console.log(requestUrl)
+
+      $.ajax({
+        url: requestUrl,
+        success: function(data) {
+          console.log(data);
+
+        for (let i = 0; i < 20; i++) {
+
+          const recipePic= data.meals[i].strMealThumb;
+          const recipeId= data.meals[i].idMeal;
+
+          console.log(data.meals[i]);  //log 5 meals
+          const $li = $('<li>');
+          console.log($li);
+          //$li.text(data.meals[i].strMeal).attr('id', i);
+          $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+          //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+          $li.on('click', () => {searchRecipe(recipeId)})
+          //put inside empty function so it will slow down, alloe recipe to be viewed
+
+          $ul.append($li);
+          console.log($ul);
+
+        }
+
+        $('#container').append($ul);
+        }
+        })
+      })
+//////////////item #7 thaiFood///////////////////////////
+$('.thaiFood').on('click',(event) => {
+  console.log(event.currentTarget)
+  let name= event.currentTarget.text
+  console.log(name)
+  //event.currentTarget
+  const $ul= $('.recpies')
+  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+  console.log(url);
+
+  let requestUrl = url + '?a=' + name
+  console.log(requestUrl)
+
+  $.ajax({
+    url: requestUrl,
+    success: function(data) {
+      console.log(data);
+
+    for (let i = 0; i < 20; i++) {
+
+      const recipePic= data.meals[i].strMealThumb;
+      const recipeId= data.meals[i].idMeal;
+
+      console.log(data.meals[i]);  //log 5 meals
+      const $li = $('<li>');
+      console.log($li);
+      //$li.text(data.meals[i].strMeal).attr('id', i);
+      $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+      //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+      $li.on('click', () => {searchRecipe(recipeId)})
+      //put inside empty function so it will slow down, alloe recipe to be viewed
+
+      $ul.append($li);
+      console.log($ul);
+
+    }
+
+    $('#container').append($ul);
+    }
+    })
+  })
+
+/////////////////item #8 greekFood/////////////
+$('.greekFood').on('click',(event) => {
+  console.log(event.currentTarget)
+  let name= event.currentTarget.text
+  console.log(name)
+  //event.currentTarget
+  const $ul= $('.recpies')
+  const url = 'https://www.themealdb.com/api/json/v1/1/filter.php'
+  console.log(url);
+
+  let requestUrl = url + '?a=' + name
+  console.log(requestUrl)
+
+  $.ajax({
+    url: requestUrl,
+    success: function(data) {
+      console.log(data);
+
+    for (let i = 0; i < 20; i++) {
+
+      const recipePic= data.meals[i].strMealThumb;
+      const recipeId= data.meals[i].idMeal;
+
+      console.log(data.meals[i]);  //log 5 meals
+      const $li = $('<li>');
+      console.log($li);
+      //$li.text(data.meals[i].strMeal).attr('id', i);
+      $li.append($('<a>').attr("id", recipeId).text(data.meals[i].strMeal));
+      //made the information from data clickable links, takes you to the photo, my api does not have the actual recipe http site
+
+      $li.on('click', () => {searchRecipe(recipeId)})
+      //put inside empty function so it will slow down, alloe recipe to be viewed
+
+      $ul.append($li);
+      console.log($ul);
+
+    }
+
+    $('#container').append($ul);
+    }
+    })
+  })
 
 
 })
