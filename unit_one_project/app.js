@@ -13,9 +13,9 @@ $(() => {
       success: function(data) {
         console.log(data)
         let $div=$('<div>')
-        let $h1=$('<h1>')
-        let $img=$('<img>').attr('src', data.meals[0].strMealThumb)
-        let $h2=$('<h2>').text(data.meals[0].strInstructions)
+        let $h1=$('<h1>').addClass('title')
+        let $img=$('<img>').attr('src', data.meals[0].strMealThumb).addClass('recipeImage')
+        let $h2=$('<h2>').text(data.meals[0].strInstructions).addClass('Info')
         //make sure you go deep, start at the main data.meals then use the array [].strMealThumb(image source provided from api)
         //same for h2, make new h2 for instructions to appear, use .text for instructions to show in browser (use strInstructions provided in api)
         $h1.text(data.meals[0].strMeal)
@@ -26,8 +26,10 @@ $(() => {
         //append the image to the div to show up in browser
         $div.append($h2)
         //append the h2 instructins to the div to show in browser
-        $('#container').append($div)
-        
+        $('.allInfo').empty()
+        $('.allInfo').append($div)
+
+
 
       }
     })
@@ -96,12 +98,12 @@ $(() => {
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       console.log(event.currentTarget);
-      var dropdowns = document.getElementsByClassName("dropdown-content");
+      let dropdowns = document.getElementsByClassName("dropdown-content");
       console.log(dropdowns);
       //mainFun("yay");
-      var i;
+      let i;
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
+        let openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
