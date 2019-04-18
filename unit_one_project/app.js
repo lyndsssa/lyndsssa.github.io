@@ -28,7 +28,7 @@ $(() => {
         //append the h2 instructins to the div to show in browser
         $('.allInfo').empty()
         $('.allInfo').append($div)
-
+        $('.recpies').empty()
 
 
       }
