@@ -25,9 +25,9 @@ The first step to creating my app was to draw out my thoughts and ideas. Once I 
 If I had more time I would like to figure out how to make a go back button, or something so the user can just click it to go back to the list of items they searched for. Because right now once they click on the desired item the list disappears, info about that item appears.  They cannot go back unless they use the back button in the browser. I also do not know how to have my site "start fresh" so once the user clicks on the desired item they have the info pulled up then they want to search something else, when they do so the current item that was chosen stays on the page and the new option list appears above it. I would also try to make the background image clear or change it completely.
 
 
-## Links to Api and my github.io
+## Links to Api and github.io
 
-link to all my files for Unit One project, this includes index.html, app.js, RESOURCES.rm, style.css, and README.md
+Link to all my files for Unit One project, this includes index.html, app.js, RESOURCES.rm, style.css, and README.md
 https://github.com/lyndsssa/lyndsssa.github.io/tree/master/unit_one_project
 
 The api I used:
